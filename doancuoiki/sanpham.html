@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web bán trái cây tươi </title>
+    <link rel="stylesheet" href="stylesanpham.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+    <link rel="stylesheet" href="assets/css/Logo.css">
+    <link rel="stylesheet" href="assets/css/Pretty-Footer-.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css'>
+    
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+        $(window).load(function() {
+        if ($('.wrapper-nav').length > 0) {
+            var _top = $('.wrapper-nav').offset().top - parseFloat($('.wrapper-nav').css('marginTop').replace(/auto/, 0));
+            $(window).scroll(function(evt) {
+            var _y = $(this).scrollTop();
+            if (_y > _top) {
+            $('.wrapper-nav').addClass('fixed');
+            $('.main-1').css("margin-top", "30px")
+            } else {
+            $('.wrapper-nav').removeClass('fixed');
+            $('.main-1').css("margin-top", "0")
+            }
+            })
+        }
+        });
+        });
+
+    </script>
+</head>
+<body onload='indexLoadPage()'>
+    <div class="container" style = "height: auto; width: auto;" >
+        <header>
+            <a href="" class="logo">
+                <img src="hinhanh/logo.png" alt="">
+            </a>
+            
+        </header>
+        
+        <nav class="navbar navbar-inverse">
+            <div class="wrapper-nav" id="main-menu-tto">
+                <nav class="nav-main">  
+                    <ul class="clearfix">
+                        <li class="form-inline my-2 my-lg-0">
+                            <form>
+                                <input class="form-control mr-sm-2" type="text" placeholder="Tìm kiếm..." > 
+                            </form>
+                        </li>
+                        <li>
+                            <a href="#" id="hi">
+                                <span class="fa fa-search"></span>
+                            </a>
+                        </li>
+                        <li><a title="Trang chủ" href="trangchu1.html">Trang chủ</a></li>
+                        <li class="active">
+                            <div class="dropdown">
+                                <a href="sanpham.html" class="dropbtn">Sản phẩm</a>
+                                <div class="dropdown-content">
+                                    <a href="#">Nước ép</a>
+                                    <a href="#">Trái cây nhập khẩu</a>
+                                    <a href="#">Trái cây nội địa</a>
+                                    <a href="#">Combo trái cây</a>
+                                    <a href="#">Sản phẩm khác</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a title="Giới thiệu" href="gioithieu.html">Giới thiệu</a>
+                        </li>
+                        
+                        <li ><a title="Liên hệ" href="lienhe.html">Liên hệ</a>
+                        </li>
+                        <li><a title="Tài khoản" href="dangnhap.html">Tài khoản</a> 
+                        </li>
+                        <li>
+                            <a href='giohang.html' >Giỏ hàng : <span id='total'>0</span></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+        <div id="banner" >
+            <div class="box-left">
+                <h2>
+                    <span>TRÁI CÂY</span>
+                    <br>
+                    <span>THƯỢNG HẠNG</span>
+                </h2>
+                <p>Chuyên cung cấp các trái cây đảm bảo dinh dưỡng
+                    hợp vệ sinh đến người dùng một cách tốt nhất</p>
+            </div>
+            <div class="box-right">
+                <img src="hinhanh/aaa.jpg" alt="">
+                <img src="hinhanh/bbb.jpg" alt="">
+                <img src="hinhanh/ccc.jpg" alt="">
+            </div>
+            <div class="to-bottom">
+                <a href="">
+                    <img src="hinhanh/to_bottom.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class = "row">
+            <article class="col-sm-9">
+                <div class='container'>
+                    <div class='row'>
+                        <div class='container'>
+                            <div class='row'>
+                                <div class='col-12 my-5' id="wp-product">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='container'>
+                    <div class='row' id='products' >
+                        </div>
+                </div>
+            </article>
+            <aside class="col-sm-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading1">
+                        <strong>DANH MỤC SẢN PHẨM</strong>
+                    </div>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item">Nước ép</a>
+                        <a href="#" class="list-group-item">Trái cây nhập khẩu</a>
+                        <a href="#" class="list-group-item">Trái cây nội địa</a>
+                        <a href="#" class="list-group-item">Combo trái cây</a>
+                        <a href="#" class="list-group-item">Sản phẩm khác</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        <footer>
+            <div class="box">
+                <div class="logo">
+                    <img src="hinhanh/logo.png" alt="">
+                </div>
+                <p>Chuyên cung cấp các loại hoa quả nhập khẩu, nội địa và các loại thực phẩm từ thiên nhiên.</p>
+            </div>
+            <div class="box">
+                <h3>NỘI DUNG</h3>
+                <ul class="quick-menu">
+                    <div class="item">
+                        <a href="">Trang chủ</a>
+                    </div>
+                    <div class="item">
+                        <a href="">Sản phẩm</a>
+                    </div>
+                    <div class="item">
+                        <a href="">Blog</a>
+                    </div>
+                    <div class="item">
+                        <a href="">Liên hệ</a>
+                    </div>
+                </ul>
+            </div>
+            <div class="box">
+                <h3>LIÊN HỆ</h3>
+                <form action="">
+                    <input type="text" placeholder="Địa chỉ email">
+                    <button>Nhận tin</button>
+                </form>
+            </div>
+        </footer>
+    </div>
+    <script>
+        const next = document.querySelector('.next')
+        const prev = document.querySelector('.prev')
+        const comment = document.querySelector('#list-comment')
+        const commentItem = document.querySelectorAll('#list-comment .item')
+        var translateY = 0
+        var count = commentItem.length
+
+        next.addEventListener('click', function (event) {
+        event.preventDefault()
+        if (count == 1) {
+            // Xem hết bình luận
+            return false
+        }
+        translateY += -400
+        comment.style.transform = `translateY(${translateY}px)`
+        count--
+        })
+
+        prev.addEventListener('click', function (event) {
+        event.preventDefault()
+        if (count == 3) {
+            // Xem hết bình luận
+            return false
+        }
+        translateY += 400
+        comment.style.transform = `translateY(${translateY}px)`
+        count++
+        })
+
+        function run(){
+        
+        }
+    </script>
+     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
+     <script src='sanpham.js'></script>
+</body>
+</html>

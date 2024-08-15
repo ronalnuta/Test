@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,200;1,400;1,500&display=swap');
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+    cursor: pointer;
+}
+body{
+    background-color:white;
+}
+
+header {
+    width: 100%;
+    padding:0px 30px;
+    margin-top:0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+}
+.active{
+    background-color: #669933;
+}
+#main-menu-tto {
+    list-style:none;
+    display: flex;
+}
+#main-menu-tto .clearfix img{
+    height: 39px;
+}
+#main-menu-tto .clearfix {
+    margin:auto ;
+    margin-left: 340px;
+}
+#main-menu-tto .clearfix input {
+    margin:auto ;
+    height: 40px;
+    width: 250px;
+}
+#main-menu-tto .clearfix span {
+    width: auto;
+    height: auto;
+    background-color: hsl(from color h s l);
+}
+#main-menu-tto .clearfix #hi {
+    height: 40px;
+}
+#main-menu-tto .clearfix #hi:hover{
+    height: 40px;
+    background-color: aquamarine;
+}
+#main-menu-tto .clearfix a {
+    color:black;
+    text-decoration: none;
+}
+#main-menu-tto .clearfix a:hover{
+    color: white;
+    background-color:#669933;
+    height: 40px;
+}
+
+#banner {
+    width:auto;
+    background-image :url("hinhanh/slider_2.jpg") ;
+    height: 463px;
+    margin-top:30px;
+    display: flex;
+    padding:0px 133px;
+    position:relative;
+}
+
+#banner .box-left ,#banner .box-right {
+    width: 50%;
+}
+
+#banner  .box-left h2 {
+    font-size:45px;
+    margin-top:10px;
+    margin-left: 60px;
+    color:whitesmoke;
+}
+
+#banner .box-left p {
+    color:whitesmoke;
+    margin-left: 60px;
+    margin-top: -6px;
+}
+
+#banner .box-right {
+    padding-left:200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#banner .box-right img {
+    margin:0px 10px;
+    animation :animation 3s infinite linear; 
+}
+
+
+#banner .box-right img:nth-child(1)
+{
+    animation-delay: 0.5s;
+}
+#banner .box-right img:nth-child(2)
+{
+    
+    animation-delay: 1s;
+}
+
+@keyframes animation {
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+    
+}
+
+.to-bottom {
+    position:absolute;
+    bottom:-40px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+
+
+footer {
+    width: 100%;
+    background:rgb(0,0,0,0.79);
+    height: 322px;
+    margin-top:338px;
+    padding:0px 63px;
+    padding-top:57px;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .box {
+    width: 250px;
+    color:#fff;
+}
+
+footer .box .quick-menu {
+    margin-top:40px;
+
+}
+
+
+footer .box .quick-menu .item{
+    margin-bottom:12px;
+
+}
+footer .box .quick-menu ,.item a{
+    color:#fff;
+    text-decoration: none;
+}
+
+
+
+footer .box form input {
+    width: 294px;
+    height: 42px;
+    background:transparent;
+    padding-left:20px;
+    color:#fff;
+    margin-top:30px;
+}
+
+footer .box form button {
+    background:#362f2f;
+    box-shadow: 5px 5px 4px rgba(0,0,0.25);
+    width: 163px;
+    height: 38px;
+    margin-top:29px;
+    color:#fff;
+}
+a, .dropbtn{
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.dropdown-content a:hover, .dropdown:hover .dropbtn{
+    background-color:#669933;
+    height: 50px;
+    color: white;
+}
+.dropdown{
+    display: inline-block;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px black;
+    z-index: 1;
+}
+.dropdown-content a:hover{
+    border-radius: 0px;
+    color: white;
+}
+
+.dropdown-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover {background-color: #669933;}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.wrapper-nav{
+    background-color:aquamarine;
+    height: 41px;
+}
+    
+.wrapper-nav.fixed {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 7000;
+    box-shadow: 0 0 5px 2px #ccc;
+}
+
+.wrapper-nav.fixed .nav-main {
+    width: 980px;
+}
+
+.nav-main {
+    height: 36px;
+}
+
+.nav-main>ul {
+    position: relative;
+    width: 100%;
+    max-width: 980px;
+	padding: 0px;
+	margin: 0px;
+}
+.nav-main>ul>li {
+	list-style: none;
+    float: left;
+    padding: 12px 0 10px;
+    border-bottom: solid 1px #ccc;
+}
+.nav-main>ul>li {
+    color: #333;
+    font-weight: 700;
+    float: left;
+    font-size: 14px;
+    padding: 1px 3.6px;
+    border-left: solid 1px #ccc;
+    height: 40px;
+}
+
+
+.boxx{
+    background:white;
+    width: 800px;
+    height: 100px;
+    padding: 25px;
+    transform: translate(40%,20%);
+    position:inherit;
+
+}
+
+
+.boxx input[type="password"], .boxx input[type="text"]{
+    background: none;
+    outline: none;
+    width: 300px;
+    height: 40px;
+    border-radius: 40px;
+    padding: 0px 15px;
+    margin: 15px 0px;
+    border: solid 2px #002cff;
+    transition: 1s;
+    box-shadow: 0px 0px 10px 0px blue, 0px 0px;
+
+}
+
+
+.boxx input[type="password"]:focus, .boxx input[type="text"]:focus{
+    width: 320px;
+    border-color: chartreuse;
+    transition: 1s;
+}
+.boxx input[type="submit"]{
+    background: #669933  ;
+    outline: none;
+    width: 160px;
+    height: 45px;
+    border-radius: 40px;
+    margin: 15px 0px;
+    border: solid 2px #002cff;
+    color:white   ;
+    font-size: 18px;
+    transition: 1s;
+}
+.boxx input[type="submit"]:hover{
+    background: red;
+    transition: 1s;
+}
+.boxx .para a:hover{
+    color: red;
+    transition: 1s;
+}
+.para a{
+    color: #669933;
+}
